@@ -2,39 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FitCheck – AI Fit Validation</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitCheck</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="hero">
   <h1>FitCheck</h1>
-  <p>Try Before You Buy — Reduce Fashion Returns</p>
-  <a href="demo.html" class="btn">Try Fit Check Demo</a>
+  <p>Try Before You Buy — Reduce Returns & Boost Confidence</p>
 </header>
 
-<section class="section">
-  <h2>The Problem</h2>
-  <p>30–40% of online fashion orders are returned. The biggest reason is poor fit and size confusion.</p>
+<section class="category-icons">
+  <img src="assets/wardrobe/tshirt.png" alt="T-shirt" class="icon" data-category="tshirt">
+  <img src="assets/wardrobe/jeans.png" alt="Jeans" class="icon" data-category="jeans">
+  <img src="assets/wardrobe/shirt.png" alt="Shirt" class="icon" data-category="shirt">
 </section>
 
-<section class="section">
-  <h2>The Solution</h2>
-  <p>FitCheck allows users to upload a photo, enter basic details, and receive instant fit and size feedback.</p>
+<section class="camera-section">
+  <video id="camera" autoplay></video>
+  <button id="captureBtn" class="btn">Take Photo</button>
+  <canvas id="snapshot" style="display:none;"></canvas>
 </section>
 
-<section class="section">
-  <h2>Vision</h2>
-  <ul>
-    <li>Phase 1: Rule-based fit validation (Live)</li>
-    <li>Phase 2: AI trained on real user data</li>
-    <li>Phase 3: B2B API for fashion brands</li>
-  </ul>
+<section class="wardrobe-section">
+  <h2>Your Wardrobe</h2>
+  <div id="wardrobeContainer" class="wardrobe-row"></div>
 </section>
 
-<footer>
-  <p>© 2026 FitCheck</p>
-</footer>
-
+<script src="js/camera.js"></script>
+<script src="js/wardrobe.js"></script>
 </body>
 </html>
